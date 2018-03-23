@@ -1,0 +1,130 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+		"deploymentId": {
+		  "value": "sxc901demo"
+		},
+		"location": {
+		  "value": "Canada Central"
+		},
+		"sitecoreAdminPassword": {
+		  "value": "SCAdm!nb"
+		},
+		"licenseXml": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/license.xml"
+		},
+		"repAuthenticationApiKey": {
+		  "value": "a2adc140-1123-4e6d-b34d-efc44a6b94ff"
+		},
+		"sqlServerLogin": {
+		  "value": "sqladmin"
+		},
+		"sqlServerPassword": {
+		  "value": "SQLpasswd"
+		},
+		"cmMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_cm.scwdp.zip"
+		},
+		"cdMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_cd.scwdp.zip"
+		},
+		"prcMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_prc.scwdp.zip"
+		},
+		"repMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_rep.scwdp.zip"
+		},
+		"xcRefDataMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_xp1referencedata.scwdp.zip"
+		},
+		"exmDdsMsDeployPackageUrl" : {
+			"value" : "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_dds.scwdp.zip"
+		},
+		"exmCmMsDeployPackageUrl" : {
+			"value" : "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore.Patch.EXM%20(Cloud)_CM.zip"
+		},
+		"xcCollectMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_xp1collection.scwdp.zip"
+		},
+		"xcSearchMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_xp1collectionsearch.scwdp.zip"
+		},
+		"maOpsMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_xp1marketingautomation.scwdp.zip"
+		},
+		"maRepMsDeployPackageUrl": {
+		  "value": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%209.0.1%20rev.%20171219%20(Cloud)_xp1marketingautomationreporting.scwdp.zip"
+		}, 				
+		"authCertificatePassword":{
+		  "value": "Local1234!"
+		},
+		"sitecoreSKU": {
+		  "value": "Small"
+		},
+		"deployExmDds": {
+			"value": false
+		},
+		"modules":{
+			"value": {
+				"items":[
+					{
+						"name": "Commerce",
+						"templateLink": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/ARMs/Sitecore%20XC%209.0.0/azuredeploy.json",
+						"parameters": {
+							"templateLinkAccessToken": "",
+							"commerceConnectMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Connect%20Core%2011.1.78.scwdp.zip",
+							"commerceEngineCloudMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.Commerce.Engine.2.1.55.scwdp.zip",
+							"commerceEngineConnectCdMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.Commerce.Engine.Connect.CD.2.1.54.scwdp.zip",
+							"commerceEngineConnectCmMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.Commerce.Engine.Connect.CM.2.1.54.scwdp.zip",
+							"idServerCloudMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.IdentityServer.1.1.3.scwdp.zip",
+							"bizfxCloudMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.BizFx.1.1.9.scwdp.zip",
+							"adventureWorksImagesDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Adventure%20Works%20Images.scwdp.zip",
+							"habitatImagesDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore.Commerce.Habitat.Images-1.0.0.scwdp.zip",
+							"indexWorkerDefinitionsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Connect%20Schema%20Definitions%20for%20IndexWorker%2011.1.78.scwdp.zip",
+							"xConnectDefinitionsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Connect%20Schema%20Definitions%20for%20xConnect%2011.1.78.scwdp.zip",							
+							"braintreeMerchantId": "<REPLACE ME 1.4>",
+							"braintreePublicKey": "<REPLACE ME 1.4>",
+							"braintreePrivateKey": "<REPLACE ME 1.4>",
+							"braintreeEnvironment": "sandbox",
+							"environmentName": "sxc901demo",
+							"defaultShopName": "Commerce Demo",
+							"defaultShopCurrency": "CAD",
+							"defaultShopLanguage": "en"
+						}
+					},
+					{
+						"name": "sxa",
+						"templateLink": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/ARMs/SXA%201.3.1/xp/azuredeploy.json",
+						"parameters": {
+							"cdSxaMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%20Experience%20Accelerator%201.6%20rev.%20180103%20for%209.0%20CD.scwdp.zip",
+							"cmSxaMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%20Experience%20Accelerator%201.6%20rev.%20180103%20for%209.0.scwdp.zip",
+							"speMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore%20PowerShell%20Extensions-4.7.2%20for%20Sitecore%208.scwdp.zip"
+						}
+					},
+					{
+						"name": "sxa-sf",
+						"templateLink": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/ARMs/SXA%20Storefront%201.0/azuredeploy.json",
+						"parameters": {
+							"sxaMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Experience%20Accelerator%201.1.47.scwdp.zip",
+							"sxaStorefrontMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Experience%20Accelerator%20Storefront%201.1.47.scwdp.zip",
+							"sxaHabitatCatalogMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Experience%20Accelerator%20Habitat%20Catalog%201.1.47.scwdp.zip",
+							"sxaStorefrontThemesMsDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/WDPs/Sitecore%20Commerce%20Experience%20Accelerator%20Storefront%20Themes%201.1.47.scwdp.zip",
+							"environmentName": "sxc901demo",
+							"siteName": "Commerce Demo"
+						}
+					},
+					{ 
+						"name": "bootloader",
+						"templateLink": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-901/ARMs/Sitecore%209.0.1/XP/addons/bootloader.json",
+						"parameters": {
+							"msDeployPackageUrl": "https://<REPLACE ME>.blob.core.windows.net/install-sitecore-xc-9/WDPs/Sitecore.Cloud.Integration.Bootload.wdp.zip"
+						}
+					}										
+				
+				]
+			}
+		
+		}
+	}
+}
